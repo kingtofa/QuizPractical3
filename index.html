@@ -32,6 +32,10 @@
       <!-- Earth -->
       <a-entity id="earth-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
         <a-sphere position="8 1.6 0" radius="0.38" src="texture/2k_earth_daymap.jpg" normal-map="texture/2k_earth_normal_map.tif"></a-sphere>
+        <!-- Moon revolving around Earth in a circular orbit -->
+        <a-entity id="moon-orbit" position="8 1.6 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
+          <a-sphere position="1 0 0" radius="0.1" src="texture/2k_moon.jpg"></a-sphere>
+        </a-entity>
       </a-entity>
 
       <!-- Mars -->
@@ -47,8 +51,8 @@
       <!-- Saturn -->
       <a-entity id="saturn-orbit" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 25000">
         <a-sphere position="16 1.6 0" radius="0.75" src="texture/2k_saturn.jpg"></a-sphere>
-        <!-- Saturn's ring -->
-        <a-ring position="16 1.6 0" rotation="90 0 0" radius-inner="1" radius-outer="1.5" src="texture/2k_saturn_ring_alpha.png" material="side: double; transparent: true;"></a-ring>
+        <!-- Saturn's ring as a round plane (a-ring) -->
+        <a-ring position="16 1.6 0" rotation="60 90 0" radius-inner="1" radius-outer="1.5" src="texture/2k_saturn_ring_alpha.png" material="side: double; transparent: true;"></a-ring>
       </a-entity>
 
       <!-- Uranus -->
